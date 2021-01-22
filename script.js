@@ -43,4 +43,9 @@ $(document).ready(function() {
       filter: filterValue
     });
   });
+
+  // Stope video upon closing modal
+  $("#myModal").on('hidden.bs.modal', function (e) {
+    $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+});
 });
